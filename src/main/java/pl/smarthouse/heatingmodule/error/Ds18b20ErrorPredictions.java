@@ -1,9 +1,6 @@
 package pl.smarthouse.heatingmodule.error;
 
-import static pl.smarthouse.fireplacemodule.properties.Ds18b20SensorsProperties.*;
-import static pl.smarthouse.fireplacemodule.properties.Ds18b20SensorsProperties.THERMOMETERS_CHIMNEY;
-import static pl.smarthouse.fireplacemodule.properties.Ds18b20SensorsProperties.THERMOMETERS_WATER_OUT;
-import static pl.smarthouse.fireplacemodule.properties.Ds18b20SensorsProperties.THERMOMETER_WATER_IN;
+import static pl.smarthouse.heatingmodule.properties.Ds18b20SensorsProperties.*;
 
 import javax.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
@@ -21,11 +18,40 @@ public class Ds18b20ErrorPredictions {
 
   @PostConstruct
   public void postConstructor() {
+    // Buffers
     Ds18b20ErrorPredictionsUtils.setDs180b20SensorsErrorPredictions(
-        errorHandlingService, THERMOMETER_WATER_IN, heatingModuleService::getWaterInSensor);
+        errorHandlingService, T_HEATING_LOW, heatingModuleService::getTHeatingLow);
     Ds18b20ErrorPredictionsUtils.setDs180b20SensorsErrorPredictions(
-        errorHandlingService, THERMOMETERS_WATER_OUT, heatingModuleService::getWaterOutSensor);
+        errorHandlingService, T_HEATING_MID, heatingModuleService::getTHeatingMid);
     Ds18b20ErrorPredictionsUtils.setDs180b20SensorsErrorPredictions(
-        errorHandlingService, THERMOMETERS_CHIMNEY, heatingModuleService::getChimneySensor);
+        errorHandlingService, T_HEATING_HIGH, heatingModuleService::getTHeatingHigh);
+    Ds18b20ErrorPredictionsUtils.setDs180b20SensorsErrorPredictions(
+        errorHandlingService, T_WATER_LOW, heatingModuleService::getTWaterLow);
+    Ds18b20ErrorPredictionsUtils.setDs180b20SensorsErrorPredictions(
+        errorHandlingService, T_WATER_MID, heatingModuleService::getTWaterMid);
+    Ds18b20ErrorPredictionsUtils.setDs180b20SensorsErrorPredictions(
+        errorHandlingService, T_WATER_HIGH, heatingModuleService::getTWaterHigh);
+
+    // Devices
+    Ds18b20ErrorPredictionsUtils.setDs180b20SensorsErrorPredictions(
+        errorHandlingService, T_SUPPLY, heatingModuleService::getTSupply);
+    Ds18b20ErrorPredictionsUtils.setDs180b20SensorsErrorPredictions(
+        errorHandlingService, T_RETURN, heatingModuleService::getTReturn);
+    Ds18b20ErrorPredictionsUtils.setDs180b20SensorsErrorPredictions(
+        errorHandlingService, T_DISTRIBUTOR, heatingModuleService::getTDistributor);
+    Ds18b20ErrorPredictionsUtils.setDs180b20SensorsErrorPredictions(
+        errorHandlingService,
+        T_DISTRIBUTOR_GROUND_FLOOR_RETURN,
+        heatingModuleService::getTDistributorFirstFloor);
+    Ds18b20ErrorPredictionsUtils.setDs180b20SensorsErrorPredictions(
+        errorHandlingService,
+        T_DISTRIBUTOR_FIRST_FLOOR_RETURN,
+        heatingModuleService::getTDistributorFirstFloor);
+    Ds18b20ErrorPredictionsUtils.setDs180b20SensorsErrorPredictions(
+        errorHandlingService, T_GROUND_SOURCE_SUPPLY, heatingModuleService::getTGroundSourceSupply);
+    Ds18b20ErrorPredictionsUtils.setDs180b20SensorsErrorPredictions(
+        errorHandlingService, T_GROUND_SOURCE_RETURN, heatingModuleService::getTGroundSourceReturn);
+    Ds18b20ErrorPredictionsUtils.setDs180b20SensorsErrorPredictions(
+        errorHandlingService, T_FIREPLACE, heatingModuleService::getTFireplace);
   }
 }

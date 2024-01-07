@@ -99,8 +99,10 @@ public class HeatingModuleConfiguration {
     Ds18b20DefaultProperties.setDefaultProperties(compareProcessor, "devices.tSupply");
     Ds18b20DefaultProperties.setDefaultProperties(compareProcessor, "devices.tReturn");
     Ds18b20DefaultProperties.setDefaultProperties(compareProcessor, "devices.tDistributor");
-    Ds18b20DefaultProperties.setDefaultProperties(compareProcessor, "devices.tDistributorGroundFloor");
-    Ds18b20DefaultProperties.setDefaultProperties(compareProcessor, "devices.tDistributorFirstFloor");
+    Ds18b20DefaultProperties.setDefaultProperties(
+        compareProcessor, "devices.tDistributorGroundFloor");
+    Ds18b20DefaultProperties.setDefaultProperties(
+        compareProcessor, "devices.tDistributorFirstFloor");
     Ds18b20DefaultProperties.setDefaultProperties(compareProcessor, "devices.tGroundSourceSupply");
     Ds18b20DefaultProperties.setDefaultProperties(compareProcessor, "devices.tGroundSourceReturn");
     Ds18b20DefaultProperties.setDefaultProperties(compareProcessor, "devices.tFireplace");

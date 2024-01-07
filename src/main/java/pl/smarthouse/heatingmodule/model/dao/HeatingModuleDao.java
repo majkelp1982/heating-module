@@ -15,6 +15,4 @@ public class HeatingModuleDao extends ModuleDao {
   @Transient private final HashMap<ZoneName, ZoneDao> zoneDaoHashMap;
   private Buffers buffers;
   private Devices devices;
-  
-  
 }

@@ -38,20 +38,20 @@ public class Ds18b20SensorsProperties {
   public static final String T_DISTRIBUTOR = "40-255-154-228-161-22-3-252";
   public static final float T_DISTRIBUTOR_GRADIENT = 0.96f;
   public static final float T_DISTRIBUTOR_INTERCEPT = 2.2f;
-  public static final String T_DISTRIBUTOR_GROUND_FLOOR = "0-0-0-0-0-0-0-0";
-  public static final float T_DISTRIBUTOR_GROUND_FLOOR_GRADIENT = 0.0f;
-  public static final float T_DISTRIBUTOR_GROUND_FLOOR_INTERCEPT = 0.0f;
-  public static final String T_DISTRIBUTOR_FIRST_FLOOR = "0-0-0-0-0-0-0-0";
-  public static final float T_DISTRIBUTOR_FIRST_FLOOR_GRADIENT = 0.f;
-  public static final float T_DISTRIBUTOR_FIRST_FLOOR_INTERCEPT = 0.0f;
+  public static final String T_DISTRIBUTOR_GROUND_FLOOR_RETURN = "1-0-0-0-0-0-0-0";
+  public static final float T_DISTRIBUTOR_GROUND_FLOOR_RETURN_GRADIENT = 0.0f;
+  public static final float T_DISTRIBUTOR_GROUND_FLOOR_RETURN_INTERCEPT = 0.0f;
+  public static final String T_DISTRIBUTOR_FIRST_FLOOR_RETURN = "2-0-0-0-0-0-0-0";
+  public static final float T_DISTRIBUTOR_FIRST_FLOOR_RETURN_GRADIENT = 0.f;
+  public static final float T_DISTRIBUTOR_FIRST_FLOOR_RETURN_INTERCEPT = 0.0f;
 
   // Ground source
-  public static final String T_GROUND_SOURCE_SUPPLY = "0-0-0-0-0-0-0-0";
+  public static final String T_GROUND_SOURCE_SUPPLY = "3-0-0-0-0-0-0-0";
   public static final float T_GROUND_SOURCE_SUPPLY_GRADIENT = 0.f;
   public static final float T_GROUND_SOURCE_SUPPLY_INTERCEPT = 0.0f;
-  public static final String T_GROUND_RETURN_SUPPLY = "0-0-0-0-0-0-0-0";
-  public static final float T_GROUND_RETURN_SUPPLY_GRADIENT = 0.f;
-  public static final float T_GROUND_RETURN_SUPPLY_INTERCEPT = 0.0f;
+  public static final String T_GROUND_SOURCE_RETURN = "4-0-0-0-0-0-0-0";
+  public static final float T_GROUND_SOURCE_RETURN_GRADIENT = 0.f;
+  public static final float T_GROUND_SOURCE_RETURN_INTERCEPT = 0.0f;
 
   // Fireplace
   public static final String T_FIREPLACE = "40-255-21-68-96-23-5-16";
